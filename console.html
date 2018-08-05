@@ -47,4 +47,42 @@
     for (i of carCompanies.concat().sort()){
         console.log(i);
     }
+    console.log(carCompanies);
+    var removedCarCompanies = [];
+    // remove last car company in the array:
+    removedCarCompanies.push(carCompanies.pop());
+    // remove first car company in the array:
+    removedCarCompanies.push(carCompanies.shift());
+    // remove the sixth and seventh car companies in the array:
+    removedCarCompanies.push(carCompanies.splice(5,2));
+    // show the latter half of the car companies array:
+    console.log(carCompanies.slice(
+            Math.floor(carCompanies.length / 2),
+            carCompanies.length
+        ));
+    console.log(removedCarCompanies);
+    //figure out what the index of ferrari is 
+    console.log(carCompanies.indexOf('ferrari'));
+    // show each car company with no vowels
+    carCompanies.forEach((a)=>console.log(a.replace(/[aeiou]/gi,'')));
+    // show an array of how many characters are in each car company name:
+    console.log(carCompanies.map((e)=>e.length));
+    // show an array 
+    //  containing only the car companies with three or more vowels in the name
+    //   (not counting y):
+    console.log(carCompanies.filter((e)=>{
+            let f = e.match(/[aeiou]/gi);
+            if (f){
+                return f.length >= 3;
+            }else{
+                return false;
+            }
+        }));
+    // try an alternate way of doing that last filter:
+    console.log(carCompanies.filter((e)=>{
+            let f = e.match(/[aeiou]/gi);
+            return f && f.length >= 3;
+        }));
+    // it worked! noice
+    
 </script>
