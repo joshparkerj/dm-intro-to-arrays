@@ -1,0 +1,50 @@
+<script>
+    console.log('let\'s try some arrays now');
+    // arrays are more like lists than dictionaries
+    // an array has a numbered index
+    // 
+    let value1 = 1;
+    let value2 = 2;
+    var arrayName = [value1,value2];
+    var pets = ['dog','cat','lizard'];
+    for (i of pets){
+        console.log(i);
+    }
+    for (i of arrayName){
+        console.log(i);
+    }
+    var carCompanies = [
+        'audi',
+        'chevy',
+        'aston martin',
+        'hyundai',
+        'benz',
+        'bmw',
+        'ford',
+        'toyota',
+        'mitsubishi',
+        'subaru',
+        'tesla',
+        'dodge',
+        'porsche',
+        'volkswagen',
+        'saab',
+        'honda',
+        'datsun',
+        'sprinter',
+        'peterbilt',
+        'ferrari',
+        'oldsmobile'
+    ];
+    for (i of carCompanies.concat().sort()){
+        console.log(i);
+    }
+    console.log(carCompanies);
+    console.log(carCompanies[3]);
+    var theBest = 'winnebago';
+    console.log(theBest == carCompanies[3]);
+    carCompanies.push(theBest);
+    for (i of carCompanies.concat().sort()){
+        console.log(i);
+    }
+</script>
